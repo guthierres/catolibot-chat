@@ -1,0 +1,27 @@
+[build]
+  command = "next build"
+  publish = ".next" # O diretório de saída padrão para builds do Next.js
+
+# O plugin @netlify/plugin-nextjs é automaticamente detectado e usado
+# pelo Netlify para projetos Next.js. Ele garante que funcionalidades
+# como Route Handlers e Server Actions funcionem como Netlify Functions.
+# Não é necessário adicioná-lo explicitamente aqui, a menos que você precise
+# de uma versão específica ou configuração avançada.
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
+
+# Exemplo opcional: Redirecionamentos
+# [[redirects]]
+#   from = "/antigo-caminho"
+#   to = "/novo-caminho"
+#   status = 301
+
+# Exemplo opcional: Cabeçalhos HTTP
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
+#     X-Content-Type-Options = "nosniff"
+#     Referrer-Policy = "strict-origin-when-cross-origin"
+#     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
